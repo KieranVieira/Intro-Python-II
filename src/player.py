@@ -14,6 +14,8 @@ class Player:
             if newRoom:
                 self.currentRoom = newRoom
                 print(f'You have moved to the room {newRoom.name}\n')
+                if not newRoom.is_light:
+                    print("Its pitch black!")
             else:
                 print("There is no room in that direction\n")
         except AttributeError:
